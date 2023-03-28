@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Что любит Гера?</title>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      text-align: center;
+      background-image: url("metallica.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 100%;
+    }
+    h1 {
+      font-size: 2em;
+      color: white;
+    }
+    button {
+      font-size: 1.5em;
+      padding: 10px 20px;
+      margin: 10px;
+    }
+    #gif {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <audio id="seekAndDestroy">
+    <source src="seekanddestroy.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает проигрывание музыки.
+  </audio>
+  <audio id="sadButTrue">
+    <source src="sadbuttrue.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает проигрывание музыки.
+  </audio>
+  <h1>Что любит Гера?</h1>
+  <div>
+    <button onclick="playSadButTrue()">Травку</button>
+    <button onclick="playSeekAndDestroy()">Металл</button>
+    <img id="gif" src="">
+  </div>
+  <script>
+    function playSeekAndDestroy() {
+      document.getElementById("gif").src = "sticker.gif";
+      document.getElementById("gif").style.display = "block";
+      setTimeout(function() {
+        document.getElementById("gif").style.display = "none";
+        document.getElementById("seekAndDestroy").play();
+      }, 3000); // Задержка в 4 секунды (4000 миллисекунд)
+    }
+
+    function playSadButTrue() {
+      document.getElementById("gif").src = "sticker.gif";
+      document.getElementById("gif").style.display = "block";
+      setTimeout(function() {
+        document.getElementById("gif").style.display = "none";
+        document.getElementById("sadButTrue").play();
+      }, 3000); // Задержка в 4 секунды (4000 миллисекунд)
+    }
+  </script>
+</body>
+</html>

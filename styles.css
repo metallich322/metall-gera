@@ -1,0 +1,17 @@
+body {
+ background-color: red;
+ background-image: url('metallica.jpg'), url('megadeth.jpg');
+ background-repeat: repeat;
+ background-position: center center, top left;
+ background-attachment: fixed, scroll;
+}
+
+h1 {
+ text-align: center;
+ color: white;
+}
+
+button {
+ padding: 20px;
+ font-size: 30px;
+}
